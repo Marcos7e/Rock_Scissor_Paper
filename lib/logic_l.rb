@@ -20,6 +20,8 @@ class Logic
 		when 2
 		         @select_human = "tijera".upcase	
 		end	
+		robotselect = robotSelect()
+		robotselect="Ud selecciono: "+@select_human+" El robot seleccino: "+robotselect
 
 	end
 
@@ -27,11 +29,11 @@ class Logic
 		@random = rand(0..2)
 		case @random
 		when  0
-			@select_robot ="piedra".uppercase
+			@select_robot ="piedra".upcase
 		when  1
-			@select_human = "papel".uppercase
+			@select_human = "papel".upcase
 		when  2
-			@select_human = "tijera".uppercase
+			@select_human = "tijera".upcase
 	end
 	end
 	
