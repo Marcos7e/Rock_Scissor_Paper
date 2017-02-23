@@ -9,3 +9,4 @@ Scenario: boton piedra
 	Given voy a la pantalla principal
 	When presionar "btn_piedra"
 	Then debe dar post
+	And debe decir "Piedra"
