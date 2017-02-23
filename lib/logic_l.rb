@@ -9,12 +9,12 @@ class Logic
 
 	def userSelect option
 	
-	case option.to_i
-		when 0
+	case option
+		when 'piedra'
 			@select_human = "piedra".uppercase	
-		when 1
+		when 'papel'
 			@select_human = "papel".uppercase	
-		when 2
+		when 'tijera'
 			@select_human = "tijera".uppercase		
 
 	end
