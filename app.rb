@@ -9,21 +9,21 @@ end
 post "/seleccionPiedra" do
 	@seleccion=params["seleccion"]
 	logic = Logic.new
-	logic.userSelect(@seleccion.to_s)
+	@seleccion = logic.userSelect(@seleccion.to_s)
 	erb :main
 end
 
 post "/seleccionTijera" do
 	@seleccion=params["seleccion"]
 	logic = Logic.new
-	logic.userSelect(@seleccion.to_s)
+	@seleccion = logic.userSelect(@seleccion.to_s)
 	erb :main
 end
 
 post "/seleccionPapel" do
 	@seleccion=params["seleccion"]
 	logic = Logic.new
-	logic.userSelect(@seleccion.to_s)
+	@seleccion = logic.userSelect(@seleccion.to_s)
 	erb :main
 end
 
