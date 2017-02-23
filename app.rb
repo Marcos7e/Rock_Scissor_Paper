@@ -1,8 +1,10 @@
 require 'sinatra'
 
+
 get '/' do
     erb :main
 end
+
 
 post "/seleccionPiedra" do
 	@seleccion=params["seleccion"]
@@ -18,3 +20,4 @@ post "/seleccionPapel" do
 	@seleccion=params["seleccion"]
      @seleccion.to_s
 end
+
