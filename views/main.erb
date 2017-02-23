@@ -2,23 +2,19 @@
 
 
 <form action="/seleccionPiedra" method="post">
-
 	<input type="hidden" name="seleccion" value="0">
-
-
 	<input type="submit" name="btn_piedra" id="btn_piedra" value="Piedra"/>
 </form>
 
 <form action="/seleccionPapel" method="post">
-	
 	<input type="hidden" name="seleccion" value="1">
-
 	<input type="submit" name="btn_papel" id="btn_papel" value="Papel"/>
 </form>
 
 <form action="/seleccionTijera" method="post">
-	
 	<input type="hidden" name="seleccion" value="2">
-	
-	<input type="submit" name="btn_tijera" id="btn_tijera" value="Tijera"/>
+	<input type="submit" name="btn_tijera" id="btn_tijera"value="Tijera"/>
 </form>
+
+<h2><%= @seleccion %></h2>
+
