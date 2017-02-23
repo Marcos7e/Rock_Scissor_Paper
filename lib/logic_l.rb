@@ -18,7 +18,8 @@ class Logic
 		when 1
 			@select_human = "papel".upcase	
 		when 2
-		         @select_human = "tijera".upcase		
+		         @select_human = "tijera".upcase	
+		end	
 
 	end
 
@@ -32,5 +33,9 @@ class Logic
 		when  2
 			@select_human = "tijera".uppercase
 	end
+	end
 	
+
+	
+
 end
