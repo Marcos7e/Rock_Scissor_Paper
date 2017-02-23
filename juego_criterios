@@ -1,0 +1,5 @@
+Criterios de aceptación
+- Si envío 0 devuelve "Piedra"
+- Si envío 1 devuelve "Papel"
+- Si envío 2 devuelve "Tijera"
+
