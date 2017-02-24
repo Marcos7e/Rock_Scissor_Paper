@@ -21,7 +21,7 @@ class Logic
 		         @select_human = "tijera".upcase	
 		end	
 		robotselect = robotSelect()
-		robotselect="Ud selecciono: "+@select_human+" El robot seleccino: "+robotselect
+		"Ud selecciono: "+@select_human+" El robot seleccino: "+robotselect
 
 	end
 
@@ -31,9 +31,9 @@ class Logic
 		when  0
 			@select_robot ="piedra".upcase
 		when  1
-			@select_human = "papel".upcase
+			@select_robot = "papel".upcase
 		when  2
-			@select_human = "tijera".upcase
+			@select_robot = "tijera".upcase
 	end
 	end
 	
