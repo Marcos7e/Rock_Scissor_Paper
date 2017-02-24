@@ -2,7 +2,11 @@ require 'sinatra'
 require_relative './lib/logic_l'
 
 def imagenPC
-	'<p>Computadora: </br><img src="/img/#{@@logic.select_robot}.jpg" height="250" width="300"></p>' 
+        if @@logic.select_robot.downcase == "tijera"
+	"<p>Computadora: </br><img src='/img/#{@@logic.select_robot.downcase}.png' height=250 width=300></p>"
+        else
+	"<p>Computadora: </br><img src='/img/#{@@logic.select_robot.downcase}.jpg' height=250 width=300></p>"
+        end
 end
 
 get '/' do   
