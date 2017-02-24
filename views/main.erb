@@ -1,10 +1,10 @@
 <html>
-<body bgcolor="#2BB542">
-<h1>Piedra, Papel o Tijera</h1>
+<body bgcolor="#FFFFFF">
+<p align="center"><img src="/img/LOGO2.png" width="600"></p>
 
-<p>Seleccione Piedra, Papel o Tijera para jugar!</p>
+<p align="center">Seleccione Piedra, Papel o Tijera para jugar!</p>
 
-<table width="300">
+<table align="center" width="300">
 <tr>
 <td align="center" width="100">
 <form action="/seleccionPiedra" method="post">
@@ -12,7 +12,7 @@
    <input type="hidden" name="seleccion" value="0" />
    <input type="hidden" name="puntajeUser" value="<%= @puntajeUser %>" />
    <input type="hidden" name="punbtajeRobot" value="<%= @putajeRobot %>" />
-   <input type="submit" name="btn_piedra" id="btn_piedra" value="Piedra"/>
+   <input type="submit" name="btn_piedra" id="btn_piedra" value="Piedra" style="background-color:#58ACFA;font-size:24px;" />
 </form>
 </td>
 <td align="center" width="100">
@@ -21,7 +21,7 @@
    <input type="hidden" name="seleccion" value="1" />
    <input type="hidden" name="puntajeUser" value="<%= @puntajeUser %>" />
    <input type="hidden" name="punbtajeRobot" value="<%= @putajeRobot %>" />
-   <input type="submit" name="btn_papel" id="btn_papel" value="Papel"/>
+   <input type="submit" name="btn_papel" id="btn_papel" value="Papel" style="background-color:#31B404;font-size:24px;" />
 </form>
 </td>
 <td align="center" width="100">
@@ -30,17 +30,19 @@
    <input type="hidden" name="seleccion" value="2" />
    <input type="hidden" name="puntajeUser" value="<%= @puntajeUser %>" />
    <input type="hidden" name="punbtajeRobot" value="<%= @putajeRobot %>" />
-   <input type="submit" name="btn_tijera" id="btn_tijera" value="Tijera"/>
+   <input type="submit" name="btn_tijera" id="btn_tijera" value="Tijera" style="background-color:#FFBF00;font-size:24px;" />
 </form>
 </td>
 </tr>
 </table>
 
+<div align="center">
 <h3><%= @ronda %></h3>
-<%= @seleccion %>
-<%= @puntajeUser %>
-<%= @puntajeRobot %>
+<font color="#58ACFA"><%= @seleccion %></font>
+<font color="#31B404"><%= @puntajeUser %>
+<%= @puntajeRobot %></font>
 <h4><%= @ganador %></h4>
+</div>
 </body>
 </html>
 
