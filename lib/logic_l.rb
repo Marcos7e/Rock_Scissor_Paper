@@ -25,9 +25,7 @@ class Logic
 		         @select_human = "tijera".upcase	
 		end	
 		evalJuego(option.to_i, robotSelect())
-		robotselect="Ud selecciono: "+@select_human+" El robot seleccino: "+select_robot+"\n Jugador: "+ getScoreHuman.to_s+" Computadora: "+ getScoreRobot.to_s
-		
-
+		robotselect="<h3>En esta ronda:</h3><br>Ud. seleccionó: "+@select_human+" (Puntos: "+ getScoreHuman.to_s+")<br>El robot seleccionó: "+select_robot+" (Puntos: "+ getScoreRobot.to_s+")"
 	end
 
 	def robotSelect 

@@ -10,8 +10,8 @@ post "/seleccionPiedra" do
    logic = Logic.new
    @seleccion = logic.userSelect(@seleccion.to_s)
    @ronda = ""
-   @puntajeUser = "Player : "+logic.getScoreHuman.to_s
-   @puntajeRobot = "Computadora : "+logic.getScoreRobot.to_s
+   @puntajeUser = "<h3>Puntaje acumulado:</h3>Jugador: "+logic.getScoreHuman.to_s
+   @puntajeRobot = "<br>Robot: "+logic.getScoreRobot.to_s
    erb :main
 end
 
@@ -20,8 +20,8 @@ post "/seleccionTijera" do
    logic = Logic.new
    @seleccion = logic.userSelect(@seleccion.to_s)
    @ronda = ""
-   @puntajeUser = "Player : "+logic.getScoreHuman.to_s
-   @puntajeRobot = "Computadora : "+logic.getScoreRobot.to_s
+   @puntajeUser = "<h3>Puntaje acumulado:</h3>Jugador: "+logic.getScoreHuman.to_s
+   @puntajeRobot = "<br>Robot: "+logic.getScoreRobot.to_s
    erb :main
 end
 
@@ -30,8 +30,8 @@ post "/seleccionPapel" do
    logic = Logic.new
    @seleccion = logic.userSelect(@seleccion.to_s)
    @ronda = ""
-   @puntajeUser = "Player : "+logic.getScoreHuman.to_s
-   @puntajeRobot = "Computadora : "+logic.getScoreRobot.to_s
+   @puntajeUser = "<h3>Puntaje acumulado:</h3>Jugador: "+logic.getScoreHuman.to_s
+   @puntajeRobot = "<br>Robot: "+logic.getScoreRobot.to_s
    erb :main
 end
 
