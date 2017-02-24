@@ -34,9 +34,7 @@ class Logic
 		end	
 		scoreActual=getScoreHuman
 		evalJuego(option.to_i, robotSelect())
-		robotselect="Ud selecciono: "+@select_human+" El robot seleccino: "+select_robot+" "+ganador(scoreActual)
-		
-		
+		robotselect="<h3>En esta ronda:</h3>Ud. seleccionó: "+@select_human+"<br>El robot seleccionó: "+select_robot+"<br><h4>"+ganador(scoreActual)+"</h4>"
 
 	end
 
