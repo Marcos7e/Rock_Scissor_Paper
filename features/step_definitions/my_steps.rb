@@ -14,3 +14,4 @@ Then(/^debo ver imagen "(.*?)"$/) do |arg1|
     last_response.body.should =~ /#{arg1}/n
 end
 
+

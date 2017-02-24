@@ -24,6 +24,12 @@ describe "Juego" do
       j = Logic.new
       j.evalJuego 2,1
       j.getScoreRobot.should == 0
-	j.getScoreHuman.should == 1
+      j.getScoreHuman.should == 1
+  end
+
+  it "Si es ronda 11" do
+      j = Logic.new
+      11.times {j.evalJuego(0,1)}
+      j.ronda.should == 0
   end
 end

@@ -78,10 +78,14 @@ class Logic
 	def resetScore
 		@score_human = 0
 		@score_robot = 0
+		@ronda=0
 	end
 	
 	def evalJuego jugador, computadora
 		@ronda+=1
+		if ronda == 11
+			resetScore	
+		end
 		if jugador == computadora
 			return			
 		else if jugador == 2 
