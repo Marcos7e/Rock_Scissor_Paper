@@ -5,6 +5,7 @@ class Logic
 		@score_robot = 0
 		@select_human = ""
 		@select_robot = ""
+		@ronda=0
 	end
 
   def select_human
@@ -13,6 +14,10 @@ class Logic
 
  def select_robot
      @select_robot
+  end
+
+ def ronda
+     @ronda
   end
 
 	def ganador scoreActual
@@ -76,7 +81,7 @@ class Logic
 	end
 	
 	def evalJuego jugador, computadora
-
+		@ronda+=1
 		if jugador == computadora
 			return			
 		else if jugador == 2 

@@ -10,7 +10,4 @@ When(/^presionar "(.*?)"$/) do |name|
   click_button(name)
 end
 
-Then(/^debe dar post$/) do
-  visit '/', :post
-end
 

@@ -28,4 +28,4 @@ Scenario: boton papel vs computadora
 Scenario: rondas
 	Given voy a la pantalla principal
 	When presionar "btn_papel"
-	Then debe decir "Round: 2"	
+	Then debe decir "Ronda:1"	
