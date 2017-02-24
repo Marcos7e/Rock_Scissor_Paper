@@ -32,4 +32,16 @@ describe "Juego" do
       11.times {j.evalJuego(0,1)}
       j.ronda.should == 0
   end
+
+  it "Si jugador Gana" do
+      j = Logic.new
+      11.times {j.evalJuego(1,0)}
+      j.winner.should == "Jugador!"
+  end
+
+  it "Si Computadora Gana" do
+      j = Logic.new
+      11.times {j.evalJuego(0,1)}
+      j.winner.should == "Computadora ! (buuuuu!)"
+  end
 end
