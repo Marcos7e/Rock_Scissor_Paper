@@ -83,7 +83,7 @@ class Logic
 	
 	def evalJuego jugador, computadora
 		@ronda+=1
-		if ronda == 10
+		if ronda == 11
 			resetScore	
 		end
 		if jugador == computadora

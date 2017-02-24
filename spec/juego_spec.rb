@@ -27,9 +27,9 @@ describe "Juego" do
       j.getScoreHuman.should == 1
   end
 
-  it "Si es ronda 10" do
+  it "Si es ronda 11" do
       j = Logic.new
-      10.times {j.evalJuego(0,1)}
+      11.times {j.evalJuego(0,1)}
       j.ronda.should == 0
   end
 end
