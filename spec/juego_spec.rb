@@ -27,27 +27,27 @@ describe "Juego" do
       j.getScoreHuman.should == 1
   end
 
-  it "Si es ronda 11" do
+  it "Si es ronda 10" do
       j = Logic.new
-      11.times {j.evalJuego(0,1)}
+      10.times {j.evalJuego(0,1)}
       j.ronda.should == 0
   end
 
   it "Si jugador Gana" do
       j = Logic.new
-      11.times {j.evalJuego(1,0)}
+      10.times {j.evalJuego(1,0)}
       j.winner.should == "Jugador!"
   end
 
   it "Si Computadora Gana" do
       j = Logic.new
-      11.times {j.evalJuego(0,1)}
+      10.times {j.evalJuego(0,1)}
       j.winner.should == "Computadora ! (buuuuu!)"
   end
 
   it "Si Hay Empate" do
       j = Logic.new
-      11.times {j.evalJuego(0,0)}
+      10.times {j.evalJuego(0,0)}
       j.winner.should == "Empate!"
   end
 

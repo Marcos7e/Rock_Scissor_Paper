@@ -1,57 +1,49 @@
 class Logic
-
-	def initialize
-		@score_human = 0
-		@score_robot = 0
-		@select_human = ""
-		@select_robot = ""
-		@ronda=0
-		@ganador = ""
-	end
+   def initialize
+	@score_human = 0
+	@score_robot = 0
+	@select_human = ""  
+	@select_robot = ""
+	@ronda=0
+	@ganador = ""
+  end
 
   def select_human
      @select_human
   end
 
- def select_robot
+  def select_robot
      @select_robot
   end
 
- def ronda
+  def ronda
      @ronda
   end
 
-def winner
-	@ganador
-end
+  def winner
+     @ganador
+  end
 
-
-
-
-def definirGanador sHuman, sRobot
+  def definirGanador sHuman, sRobot
  	if(sHuman > sRobot)
 		@ganador = "Jugador!"
 	elsif(sHuman < sRobot)	
 		@ganador = "Computadora ! (buuuuu!)"
 	else
 		@ganador = "Empate!"	
-	end
+	end	
+  end
+
+  def ganador scoreActual
+	if getScoreHuman>scoreActual	
+        	"Ganador: Player!"
+	else
+		"Ganador: Computadora!"	
+	end			
+  end
 	
-end
-
-
-
-
-	def ganador scoreActual
-		if getScoreHuman>scoreActual	
-				"Ganador: Player!"
-			else
-				"Ganador: Computadora!"	
-			end			
-	end
-	
-	def userSelect option
-		case option.to_i
+  def userSelect option
+	case option.to_i
 		when 0
 			@select_human = "piedra".upcase	
 		when 1
@@ -62,7 +54,6 @@ end
 		scoreActual=getScoreHuman
 		evalJuego(option.to_i, robotSelect())
 		robotselect="<h3>En esta ronda:</h3>Ud. seleccionó: "+@select_human+"<br>El robot seleccionó: "+select_robot+"<br><h4>"+ganador(scoreActual)+"</h4>"
-
 	end
 
 	def robotSelect 
@@ -79,7 +70,6 @@ end
 			return 2
 		end
 	end
-
 
 	def scoreHuman
 		@score_human += 1
@@ -105,9 +95,9 @@ end
 	
 	def evalJuego jugador, computadora
 		@ronda+=1
-		if ronda == 11
-			resetScore
+		if ronda == 10
 			definirGanador jugador.to_i, computadora.to_i	
+			resetScore	
 		end
 		if jugador == computadora
 			return			
@@ -131,10 +121,5 @@ end
 			end			
 		end
 	end
-	
-
-	
-
-end
-
+   end
 end

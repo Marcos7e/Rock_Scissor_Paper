@@ -23,8 +23,8 @@ post "/seleccionPiedra" do
    @ronda = "Ronda:"+@@logic.ronda.to_s + " de 10"
    @puntajeUser = "<h3>Puntaje acumulado:</h3>Jugador: "+@@logic.getScoreHuman.to_s
    @puntajeRobot = "<br>Robot: "+@@logic.getScoreRobot.to_s
+   @winner = @@logic.winner.to_s
    erb :main
-
 end
 
 post "/seleccionTijera" do
@@ -35,6 +35,7 @@ post "/seleccionTijera" do
    @ronda = "Ronda:"+@@logic.ronda.to_s + " de 10"
    @puntajeUser = "<h3>Puntaje acumulado:</h3>Jugador: "+@@logic.getScoreHuman.to_s
    @puntajeRobot = "<br>Robot: "+@@logic.getScoreRobot.to_s
+   @winner = @@logic.winner.to_s
    erb :main
 end
 
@@ -46,7 +47,7 @@ post "/seleccionPapel" do
    @ronda = "Ronda:"+@@logic.ronda.to_s + " de 10"
    @puntajeUser = "<h3>Puntaje acumulado:</h3>Jugador: "+@@logic.getScoreHuman.to_s
    @puntajeRobot = "<br>Robot: "+@@logic.getScoreRobot.to_s
-
+   @winner = @@logic.winner.to_s
    erb :main
 end
 
