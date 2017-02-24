@@ -36,6 +36,20 @@ class Logic
 			@select_robot = "tijera".upcase
 	end
 	end
+
+
+	def scoreHuman
+		@score_human += 1
+	end
+
+	def scoreRobot
+		@score_robot += 1
+	end
+
+	def resetScore
+		@score_human = 0
+		@score_robot = 0
+	end
 	
 
 	
