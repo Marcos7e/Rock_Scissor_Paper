@@ -19,3 +19,8 @@ Scenario: boton papel
 	Given voy a la pantalla principal
 	When presionar "btn_papel"
 	Then debe decir "PAPEL"
+
+Scenario: boton papel vs computadora
+	Given voy a la pantalla principal
+	When presionar "btn_papel"
+	Then debe decir "PAPEL"

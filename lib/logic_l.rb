@@ -11,6 +11,10 @@ class Logic
      @select_human
   end
 
+ def select_robot
+     @select_robot
+  end
+
 	def userSelect option
 		case option.to_i
 		when 0
@@ -20,8 +24,9 @@ class Logic
 		when 2
 		         @select_human = "tijera".upcase	
 		end	
-		robotselect = robotSelect()
-		"Ud selecciono: "+@select_human+" El robot seleccino: "+robotselect
+		evalJuego(option.to_i, robotSelect())
+		robotselect="Ud selecciono: "+@select_human+" El robot seleccino: "+select_robot+"\n Jugador: "+ getScoreHuman.to_s+" Computadora: "+ getScoreRobot.to_s
+		
 
 	end
 
@@ -30,10 +35,13 @@ class Logic
 		case @random
 		when  0
 			@select_robot ="piedra".upcase
+			return 0
 		when  1
 			@select_robot = "papel".upcase
+			return 1
 		when  2
 			@select_robot = "tijera".upcase
+			return 2
 		end
 	end
 
@@ -70,7 +78,7 @@ class Logic
 			scoreHuman
 			end			
 		else
-			if jugador>robot
+			if jugador>computadora
 			scoreHuman
 			else
 			scoreRobot
