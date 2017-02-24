@@ -34,13 +34,15 @@ class Logic
 	end	
   end
 
-  def ganador scoreActual
-	if getScoreHuman>scoreActual	
-        	"Ganador: Player!"
-	else
-		"Ganador: Computadora!"	
-	end			
-  end
+	def ganador scoreActual, scoreActualPC
+		if getScoreHuman>scoreActual	
+				"Ganador: Player!"
+		elsif getScoreRobot==scoreActualPC	
+				"Empate!!!!"
+		else
+				"Ganador: Computadora!"	
+		end			
+	end
 	
   def userSelect option
 	case option.to_i
@@ -52,8 +54,9 @@ class Logic
 		         @select_human = "tijera".upcase	
 		end	
 		scoreActual=getScoreHuman
+		scoreActualPC=getScoreRobot
 		evalJuego(option.to_i, robotSelect())
-		robotselect="<h3>En esta ronda:</h3>Ud. seleccionó: "+@select_human+"<br>El robot seleccionó: "+select_robot+"<br><h4>"+ganador(scoreActual)+"</h4>"
+		robotselect="<h3>En esta ronda:</h3>Ud. seleccionó: "+@select_human+"<br>El robot seleccionó: "+select_robot+"<br><h4>"+ganador(scoreActual, scoreActualPC)+"</h4>"
 	end
 
 	def robotSelect 
