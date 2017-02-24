@@ -44,4 +44,13 @@ describe "Juego" do
       11.times {j.evalJuego(0,1)}
       j.winner.should == "Computadora ! (buuuuu!)"
   end
+
+  it "Si Hay Empate" do
+      j = Logic.new
+      11.times {j.evalJuego(0,0)}
+      j.winner.should == "Empate!"
+  end
+
+  
+
 end

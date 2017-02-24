@@ -31,9 +31,12 @@ end
 def definirGanador sHuman, sRobot
  	if(sHuman > sRobot)
 		@ganador = "Jugador!"
-	else	
-		@ganador = "Computadora ! (buuuuu!)"	
+	elsif(sHuman < sRobot)	
+		@ganador = "Computadora ! (buuuuu!)"
+	else
+		@ganador = "Empate!"	
 	end
+	
 end
 
 
