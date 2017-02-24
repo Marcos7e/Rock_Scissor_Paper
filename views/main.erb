@@ -1,20 +1,43 @@
-<h1>Piedra, Papel o Tijera<h1/>
+<body bgcolor="#2BB542">
+<h1>Piedra, Papel o Tijera</h1>
 
+<p>Seleccione Piedra, Papel o Tijera para jugar!</p>
 
+<table width="300">
+<tr>
+<td align="center" width="100">
 <form action="/seleccionPiedra" method="post">
-	<input type="hidden" name="seleccion" value="0">
-	<input type="submit" name="btn_piedra" id="btn_piedra" value="Piedra"/>
+   <input type="hidden" name="ronda" value="<%= @ronda %>">
+   <input type="hidden" name="seleccion" value="0">
+   <input type="hidden" name="puntajeUser" value="<%= @puntajeUser %>">
+   <input type="hidden" name="punbtajeRobot" value="<%= @putajeRobot %>">
+   <input type="submit" name="btn_piedra" id="btn_piedra" value="Piedra"/>
 </form>
-
+</td>
+<td align="center" width="100">
 <form action="/seleccionPapel" method="post">
-	<input type="hidden" name="seleccion" value="1">
-	<input type="submit" name="btn_papel" id="btn_papel" value="Papel"/>
+   <input type="hidden" name="ronda" value="<%= @ronda %>">
+   <input type="hidden" name="seleccion" value="1">
+   <input type="hidden" name="puntajeUser" value="<%= @puntajeUser %>">
+   <input type="hidden" name="punbtajeRobot" value="<%= @putajeRobot %>">
+   <input type="submit" name="btn_papel" id="btn_papel" value="Papel"/>
 </form>
-
+</td>
+<td align="center" width="100">
 <form action="/seleccionTijera" method="post">
-	<input type="hidden" name="seleccion" value="2">
-	<input type="submit" name="btn_tijera" id="btn_tijera"value="Tijera"/>
+   <input type="hidden" name="ronda" value="<%= @ronda %>">
+   <input type="hidden" name="seleccion" value="2">
+   <input type="hidden" name="puntajeUser" value="<%= @puntajeUser %>">
+   <input type="hidden" name="punbtajeRobot" value="<%= @putajeRobot %>">
+   <input type="submit" name="btn_tijera" id="btn_tijera"value="Tijera"/>
 </form>
+</td>
+</tr>
+</table>
 
-<h2><%= @seleccion %></h2>
+<h4><%= @ronda %></h4>
+<h4><%= @seleccion %></h4>
+<h4><%= @puntajeUser %></h4>
+<h4><%= @puntajeRobot %></h4>
+</body>
 
