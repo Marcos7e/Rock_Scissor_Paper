@@ -6,6 +6,7 @@ class Logic
 		@select_human = ""
 		@select_robot = ""
 		@ronda=0
+		@ganador = ""
 	end
 
   def select_human
@@ -19,6 +20,24 @@ class Logic
  def ronda
      @ronda
   end
+
+def winner
+	@ganador
+end
+
+
+
+
+def definirGanador sHuman, sRobot
+ 	if(sHuman > sRobot)
+		@ganador = "Jugador!"
+	else	
+		@ganador = "Computadora ! (buuuuu!)"	
+	end
+end
+
+
+
 
 	def ganador scoreActual
 		if getScoreHuman>scoreActual	
@@ -84,7 +103,8 @@ class Logic
 	def evalJuego jugador, computadora
 		@ronda+=1
 		if ronda == 11
-			resetScore	
+			resetScore
+			definirGanador jugador.to_i, computadora.to_i	
 		end
 		if jugador == computadora
 			return			
