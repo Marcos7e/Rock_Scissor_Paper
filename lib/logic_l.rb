@@ -34,7 +34,7 @@ class Logic
 			@select_robot = "papel".upcase
 		when  2
 			@select_robot = "tijera".upcase
-	end
+		end
 	end
 
 
@@ -45,13 +45,42 @@ class Logic
 	def scoreRobot
 		@score_robot += 1
 	end
+	
+	def getScoreRobot
+		@score_robot
+	end
+
+	def getScoreHuman
+		@score_human
+	end
 
 	def resetScore
 		@score_human = 0
 		@score_robot = 0
 	end
 	
+	def evalJuego jugador, computadora
+
+		if jugador == computadora
+			return			
+		else if jugador == 2 
+			if computadora ==0
+			scoreRobot
+			else
+			scoreHuman
+			end			
+		else
+			if jugador>robot
+			scoreHuman
+			else
+			scoreRobot
+			end			
+		end
+	end
+	
 
 	
+
+end
 
 end

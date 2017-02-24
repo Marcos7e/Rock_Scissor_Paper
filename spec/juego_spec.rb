@@ -22,8 +22,8 @@ describe "Juego" do
 
   it "Si Humano elije tijera y robot elije papel" do
       j = Logic.new
-      j.juegue 2,3
-      j.score_robot.should == 1
-	j.score_humano.should == 0
+      j.evalJuego 2,1
+      j.getScoreRobot.should == 0
+	j.getScoreHuman.should == 1
   end
 end
